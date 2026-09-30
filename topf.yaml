@@ -1,0 +1,36 @@
+kubernetesVersion: 1.36.2
+talosVersion: 1.13.5
+clusterEndpoint: https://control.kube.home:6443
+clusterName: k8s-home
+schematicId: "@schematic.yaml"
+nodes:
+  - host: k8s-1
+    ip: 192.168.2.2
+    role: control-plane
+    data:
+      interface: eno1
+      vlanAddress: 192.168.4.2/24
+  - host: k8s-2
+    ip: 192.168.2.3
+    role: worker
+    data:
+      interface: eno1
+      vlanAddress: 192.168.4.3/24
+  - host: k8s-3
+    ip: 192.168.2.4
+    role: control-plane
+    data:
+      interface: enp0s31f6
+      vlanAddress: 192.168.4.4/24
+  - host: k8s-4
+    ip: 192.168.2.5
+    role: control-plane
+    data:
+      interface: enp2s0
+      vlanAddress: 192.168.4.5/24
+  - host: k8s-5
+    ip: 192.168.2.6
+    role: worker
+    data:
+      interface: enp2s0
+      vlanAddress: 192.168.4.6/24
