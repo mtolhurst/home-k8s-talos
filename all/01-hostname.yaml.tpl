@@ -1,4 +1,4 @@
 apiVersion: v1alpha1
 kind: HostnameConfig
 auto: "off"
-hostname: {{ .Node.Host }}.kube.home
+hostname: {{ .Node.Host }}

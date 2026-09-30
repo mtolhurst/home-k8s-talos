@@ -1,6 +1,12 @@
-apiVersion: v1alpha1
-kind: UnattendedInstallConfig
-provisioning:
-  diskSelector:
-    match: disk.dev_path == "/dev/sda"
-  wipe: false
+# apiVersion: v1alpha1
+# kind: UnattendedInstallConfig
+# provisioning:
+#   diskSelector:
+#     match: disk.dev_path == "/dev/sda"
+#   wipe: false
+
+machine:
+  install:
+    disk: /dev/sda
+    wipe: false
+
