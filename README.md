@@ -42,8 +42,10 @@ This will first show a diff of all changes, requiring confirmation.
 First, modify the talos version in [./topf.yaml].
 Then, run `topf upgrade` to update the image and reboot.
 
-With the current cluster setup, we seem to be hitting timeouts draining pods. Either disable drain, or
-set a --drain-timeout that's higher (e.g. 15min)
+With the current cluster setup, we seem to be hitting timeouts draining pods.
+Downtime isn't really that important here, so just run `topf upgrade drain=false` to skip this.
+
+(We can look into extending timeouts, or skipping after timeout later if we actually care about this)
 
 ## K8s version upgrades
 These should not be managed directly through topf. 
