@@ -21,13 +21,17 @@ addresses:
 
 ---
 machine:
-  nodeLabels:
-    network.home/matter-vlan: "true"
   sysctls:
     net/ipv4/conf/all/rp_filter: "2"
     net/ipv4/conf/default/rp_filter: "2"
-    # Dynamically targets your specific interface name (e.g., net/ipv4/conf/enp2s0.2/rp_filter)
     net/ipv4/conf/{{ .Node.Data.interface }}.2/rp_filter: "2" 
     net/ipv6/conf/all/disable_ipv6: "0"
     net/ipv6/conf/default/disable_ipv6: "0"
     net/ipv6/conf/{{ .Node.Data.interface }}.2/disable_ipv6: "0"
+
+---
+apiVersion: v1alpha1
+kind: KubeNodeConfig
+labels:
+  network.home/matter-vlan: "true"
+

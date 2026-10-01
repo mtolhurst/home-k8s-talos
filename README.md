@@ -34,6 +34,11 @@ Next, run `topf kubeconfig` to get a kubeconfig with access to the cluster, and 
 
 After this, the cluster should be healthy, and ready for applications.
 
+## Setting up talosconfig
+`topf talosconfig > ~/.talos/config`
+
+This will allow for regular talosctl commands to be run.
+
 ## Regular updates
 After making any required changes to the config files, just run `topf apply` to apply the changes.
 This will first show a diff of all changes, requiring confirmation.
