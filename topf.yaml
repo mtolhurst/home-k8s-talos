@@ -1,4 +1,4 @@
-kubernetesVersion: 1.36.2
+kubernetesVersion: 1.37.1
 talosVersion: 1.14.2
 clusterEndpoint: https://control.kube.home:6443
 clusterName: k8s-home
