@@ -1,5 +1,5 @@
 kubernetesVersion: 1.36.2
-talosVersion: 1.13.5
+talosVersion: 1.14.2
 clusterEndpoint: https://control.kube.home:6443
 clusterName: k8s-home
 schematicId: "@schematic.yaml"
